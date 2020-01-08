@@ -5,7 +5,7 @@
 
 <mapper namespace="com.kuang.springcloud.dao.DeptDao">
     <insert id="addDept" parameterType="Dept">
-        insert into dept (deptname, de_source) values
+        insert into dept (deptname, db_source) values
         (#{deptname},DATABASE())
     </insert>
 
