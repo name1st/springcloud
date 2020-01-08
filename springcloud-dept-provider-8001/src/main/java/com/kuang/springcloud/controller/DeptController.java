@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * Created by wonders on 2020-01-07 16:29
+ * Created by wonders on 2020-01-08 10:11
  */
 @RestController
 public class DeptController {
@@ -19,26 +19,21 @@ public class DeptController {
     @Autowired
     private DeptService deptService;
 
-    @PostMapping("/dept/add")
+    @PostMapping("/dept/addDept")
     public boolean addDept(Dept dept){
+
         return deptService.addDept(dept);
     }
 
+    @GetMapping("/dept/get/{deptno}")
+    public Dept addDept(@PathVariable("deptno") Long deptno){
 
-    @GetMapping("/dept/get/{id}")
-    public Dept queryById(@PathVariable("id") Long id){
-        return deptService.queryById(id);
+        return deptService.queryById(deptno);
     }
 
     @GetMapping("/dept/list")
     public List<Dept> queryAll(){
+
         return deptService.queryAll();
     }
-
-
-    @GetMapping("/dept")
-    public String hello(){
-        return "hello";
-    }
-
 }

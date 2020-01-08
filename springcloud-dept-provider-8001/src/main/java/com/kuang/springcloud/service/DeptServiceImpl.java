@@ -8,26 +8,29 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by wonders on 2020-01-07 17:03
+ * Created by wonders on 2020-01-08 09:58
  */
 @Service
-public class DeptServiceImpl implements DeptService {
+public class DeptServiceImpl implements DeptService{
 
     @Autowired
     private DeptDao deptDao;
 
     @Override
     public boolean addDept(Dept dept) {
+
         return deptDao.addDept(dept);
     }
 
     @Override
-    public Dept queryById(Long id) {
-        return deptDao.queryById(id);
+    public Dept queryById(Long deptno) {
+
+        return deptDao.queryById(deptno);
     }
 
     @Override
     public List<Dept> queryAll() {
+
         return deptDao.queryAll();
     }
 }

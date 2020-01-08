@@ -4,12 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Created by wonders on 2020-01-07 16:42
+ * Created by wonders on 2020-01-08 10:18
+ *
+ * 启动类
  */
 @SpringBootApplication
-public class DeptProvider8001 {
+public class DeptProvider_8001 {
 
     public static void main(String[] args) {
-        SpringApplication.run(DeptProvider8001.class,args);
+        SpringApplication.run(DeptProvider_8001.class,args);
     }
 }

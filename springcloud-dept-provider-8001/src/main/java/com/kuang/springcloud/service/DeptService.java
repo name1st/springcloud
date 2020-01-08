@@ -8,8 +8,7 @@ public interface DeptService {
 
     public boolean addDept(Dept dept);
 
-    public Dept queryById(Long id);
+    public Dept queryById(Long deptno);
 
     public List<Dept> queryAll();
 }
-
