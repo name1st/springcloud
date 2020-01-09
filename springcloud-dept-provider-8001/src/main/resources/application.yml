@@ -17,3 +17,18 @@ spring:
     url: jdbc:mysql://localhost:3306/Db01?useUnicode=true&characterEncoding=utf-8
     username: root
     password: root
+
+#eureka 配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: springcloud-provider-dept8001
+
+
+
+#配置info
+info:
+  app.name: dept8001
+  company.name: kuang.com
