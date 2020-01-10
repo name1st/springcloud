@@ -4,9 +4,12 @@ server:
   #Eureka 配置
 eureka:
   instance:
-    hostname: localhost  #服务器实例地址名称
+    hostname: eureka7001.com  #服务器实例地址名称
   client:
     register-with-eureka: false   # 表示是否向eureka 注册中心注册自己
     fetch-registry: false   # fetch-registry 若为false 则表示自己为注册中心
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}/${server.port}/eureka/
+    service-url:  #单个注册中心 http://${eureka.instance.hostname}/${server.port}/eureka/
+      #集群（）
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+
+
