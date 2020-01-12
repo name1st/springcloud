@@ -10,14 +10,15 @@ import java.io.Serializable;
  * Created by wonders on 2020-01-07 15:29
  */
 @Data
-@NoArgsConstructor
+@NoArgsConstructor  //无参构造
 @Accessors(chain = true)    //链式写法
 public class Dept implements Serializable {
 
     private Long deptno;//主键
 
     private String deptname;
-//这个数据库存在
+
+    //这个数据库存在哪个库中
     private String db_source;
 
     public Dept(String deptname) {

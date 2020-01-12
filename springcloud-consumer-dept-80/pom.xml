@@ -11,7 +11,7 @@
 
     <artifactId>springcloud-consumer-dept-80</artifactId>
 
-        <dependencies>
+    <dependencies>
 
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-ribbon -->
             <dependency>
